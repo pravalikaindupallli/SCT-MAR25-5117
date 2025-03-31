@@ -16,10 +16,10 @@ Welcome to my repository showcasing the tasks I completed as part of my **SkillC
 - **Tools Used:** Pandas, NumPy
 - **Outcome:** Successfully cleaned and preprocessed data for further analysis.
 
-### **📌 Task 3: Advanced Data Visualization - Tableau**
-- **Objective:** Create a dashboard using Tableau to analyze demographic trends.
-- **Tools Used:** Tableau, Excel
-- **Outcome:** Designed an interactive Tableau dashboard featuring population statistics by state, gender, and age.
+### **📌 Task 3: Building a decision tree classifier
+- **Objective:** building a decision tree classifier to predict whether a customer will purchase a product or service based on their demographic and behavorial data.
+- **Tools Used:** pandas 
+- **Outcome:** building a decision tree classifier to predict whether a customer will purchase a product 
 
 ---
 
@@ -33,7 +33,6 @@ Welcome to my repository showcasing the tasks I completed as part of my **SkillC
 
 ## 🛠 Tech Stack Used
 - **Python** (Pandas, Matplotlib, Seaborn, NumPy)
-- **Tableau** (Dashboards & Storytelling)
 - **Excel** (Data Handling & Preparation)
 
 ---
