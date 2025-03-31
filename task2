@@ -1,0 +1,57 @@
+import pandas as pd
+from google.colab import files
+
+uploaded = files.upload()
+file_name = list(uploaded.keys())[0]
+titanic_data= pd.read_csv(file_name)
+
+print(titanic_data.head())
+
+# data cleaning
+
+print(titanic_data.head())
+
+print(titanic_data.shape)
+
+print(titanic_data.info())
+print(titanic_data.isnull().sum())
+
+titanic_data['Age'].fillna(titanic_data['Age'].median(), inplace=True)
+
+titanic_data['Embarked'].fillna(titanic_data['Embarked'].mode()[0], inplace=True)
+
+print(titanic_data.columns)
+titanic_data.drop(['PassengerId', 'Name', 'Ticket'], axis=1, inplace=True, errors='ignore')
+
+titanic_data.drop_duplicates(inplace=True)
+
+#EDA
+
+print(titanic_data.describe())
+
+#Survival Rate by Gender
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+sns.countplot(x='Survived', hue='Sex', data=titanic_data)
+plt.title('Survival Count by Gender')
+plt.show()
+
+#Survival Rate by passenger
+sns.countplot(x='Survived', hue='Pclass', data=titanic_data)
+plt.title('Survival Count by Passenger Class')
+plt.show()
+
+sns.histplot(titanic_data['Age'], bins=30, kde=True)
+plt.title('Age Distribution of Passengers')
+plt.show()
+
+titanic_data['Sex'] = titanic_data['Sex'].map({'male': 0, 'female': 1})
+
+correlation_matrix = titanic_data.corr()
+plt.figure(figsize=(10, 6))
+sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', fmt='.2f')
+plt.title('Correlation Matrix')
+plt.show()
+
+titanic_data.to_csv('cleaned_titanic_data.csv', index=False)
