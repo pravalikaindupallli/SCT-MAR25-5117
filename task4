@@ -1,0 +1,73 @@
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+import folium
+from folium.plugins import HeatMap
+import plotly.express as px
+from datetime import datetime
+from sklearn.model_selection import train_test_split
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.metrics import classification_report, accuracy_score
+from sklearn.metrics import accuracy_score, classification_report
+
+import pandas as pd
+from google.colab import files
+
+uploaded = files.upload()
+file_name = list(uploaded.keys())[0]
+df= pd.read_csv(file_name)
+
+print(df.head())
+
+# Check for missing values
+print(df.isnull().sum())
+
+# Drop rows with missing values (or impute)
+df = df.dropna()
+
+print(df.isnull().sum())  # Check missing values
+print(df.shape)           # Check number of rows and columns
+print(df.head())          # Inspect first few rows
+
+print(df.columns)
+
+# Convert date column to datetime format
+df['Crash Date/Time'] = pd.to_datetime(df['Crash Date/Time'])  # Adjust column name if needed
+
+# Extract useful time features
+df['hour'] = df['Crash Date/Time'].dt.hour
+df['day_of_week'] = df['Crash Date/Time'].dt.day_name()
+df['month'] = df['Crash Date/Time'].dt.month
+
+plt.figure(figsize=(10,5))
+sns.countplot(x='hour', data=df, palette='coolwarm')
+plt.xlabel("Hour of Day")
+plt.ylabel("Number of Accidents")
+plt.title("Accidents by Time of Day")
+plt.show()
+
+plt.figure(figsize=(12, 5))
+sns.countplot(y='Weather', data=df, order=df['Weather'].value_counts().index, palette='magma')
+plt.xlabel("Number of Accidents")
+plt.ylabel("Weather Condition")
+plt.title("Accidents vs Weather Condition")
+plt.show()
+
+print(df[['Latitude', 'Longitude']].isnull().sum())
+
+df_clean = df.dropna(subset=['Latitude', 'Longitude'])
+
+print(df.columns)
+
+df.rename(columns=lambda x: x.strip(), inplace=True)  # Removes spaces from column names
+
+lat_mean = df_clean['Latitude'].mean()
+lon_mean = df_clean['Longitude'].mean()
+print(lat_mean, lon_mean)
+
+df_clean['Latitude'] = pd.to_numeric(df_clean['Latitude'], errors='coerce')
+df_clean['Longitude'] = pd.to_numeric(df_clean['Longitude'], errors='coerce')
+
+print(df_clean[['Latitude', 'Longitude']].head())
+
