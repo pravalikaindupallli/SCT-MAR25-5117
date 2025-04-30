@@ -1,47 +1,80 @@
-# 📊 SkillCraft Data Science Internship
+# 🎯 SkillCraft Technology - Data Science Internship Projects
 
-Welcome to my repository showcasing the tasks I completed as part of my **SkillCraft Data Science Internship**. This repo contains data visualization, analysis, and machine learning projects, demonstrating my skills in Python, Tableau, and data interpretation.
-
----
-
-## 🚀 Completed Tasks
-
-### **📌 Task 1: Data Visualization - Bar Chart Representation**
-- **Objective:** Visualize the distribution of male and female populations by state.
-- **Tools Used:** Python (Matplotlib, Seaborn, Pandas)
-- **Outcome:** Created a bar chart to analyze gender distribution across different states.
-
-### **📌 Task 2: Data Cleaning & Preprocessing**
-- **Objective:** Prepare the dataset for visualization by handling missing values and standardizing formats.
-- **Tools Used:** Pandas, NumPy
-- **Outcome:** Successfully cleaned and preprocessed data for further analysis.
-
-### **📌 Task 3: Building a decision tree classifier
-- **Objective:** building a decision tree classifier to predict whether a customer will purchase a product or service based on their demographic and behavorial data.
-- **Tools Used:** pandas 
-- **Outcome:** building a decision tree classifier to predict whether a customer will purchase a product 
+This repository contains completed tasks from the SkillCraft Technology Data Science Internship. Each task involves solving real-world data problems using Python and popular libraries like Pandas, Matplotlib, and Scikit-learn.
 
 ---
 
-## 📈 Key Learnings
-✅ Data cleaning and preprocessing techniques.  
-✅ Creating effective visualizations in Python and Tableau.  
-✅ Interpreting demographic data trends using statistical insights.  
-✅ Enhancing data storytelling through interactive dashboards.
+## 📊 Task 01: Population Distribution Visualization
+
+**Objective:**
+Visualize the distribution of a categorical or continuous variable using a bar chart or histogram.
+
+**Details:**
+- Dataset: India's Population by Age (2022)
+- Tools: Pandas, Matplotlib
+- Visualized age group distribution: 0–20 years, 21–64 years, 65+ years
+
+**Key Takeaways:**
+- Learned demographic visualization
+- Practiced grouping and plotting categorical ranges
 
 ---
 
-## 🛠 Tech Stack Used
-- **Python** (Pandas, Matplotlib, Seaborn, NumPy)
-- **Excel** (Data Handling & Preparation)
+## 🧼 Task 02: Titanic Dataset - EDA & Cleaning
+
+**Objective:**
+Perform data cleaning and exploratory data analysis (EDA) using the Titanic dataset.
+
+**Details:**
+- Cleaned null values, handled missing age values
+- Visualized survival rates across class, age, and gender
+- Tools: Pandas, Seaborn, Matplotlib
+
+**Key Takeaways:**
+- Gained insights from multivariate analysis
+- Hands-on with dataset preprocessing
 
 ---
 
-## 📢 Connect With Me
-💼 LinkedIn : linkedin.com/in/pravalika-indupalli-6068a12bb 
-📂 GitHub :  https://github.com/pravalikaindupallli
-📧 Email: pravalikaindupalli@example.com  
+## 🌳 Task 03: Customer Purchase Prediction (Decision Tree)
+
+**Objective:**
+Build a Decision Tree model to predict if a customer will purchase a product based on behavioral and demographic features.
+
+**Details:**
+- Dataset: UCI Bank Marketing Dataset
+- Tools: Pandas, Scikit-learn
+- Applied label encoding, trained DecisionTreeClassifier, evaluated using accuracy and confusion matrix
+
+**Key Takeaways:**
+- Model interpretability with tree diagrams
+- Understood feature importance in classification
 
 ---
 
-Stay tuned for more updates as I continue my journey in **Data Science & Analytics**! 🚀
+## 🚧 Task 04: Traffic Accident Pattern Analysis
+
+**Objective:**
+Analyze road accident data to identify patterns based on time, weather, and road conditions.
+
+**Details:**
+- Dataset: Public accident dataset
+- Visualized accident frequency by hour, weekday, and weather
+- Tools: Pandas, Matplotlib
+
+**Key Takeaways:**
+- Used time-series plots for temporal analysis
+- Discovered peak accident timings and contributing factors
+
+---
+
+## 🛠️ Tools & Technologies Used
+- Python 3
+- Pandas & NumPy
+- Matplotlib & Seaborn
+- Scikit-learn
+
+---
+
+> ✅ Feel free to explore the respective folders for each task. Contributions and suggestions are welcome!
+
